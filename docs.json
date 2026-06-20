@@ -18,20 +18,6 @@
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    },
     "groups": [
       {
         "group": "Getting Started",
@@ -43,7 +29,8 @@
               "open-claw",
               "hermes",
               "untitled-page"
-            ]
+            ],
+            "expanded": true
           }
         ]
       },
@@ -53,6 +40,14 @@
           "webhooks",
           "mcp",
           "rules"
+        ]
+      },
+      {
+        "group": "Platforms",
+        "pages": [
+          "x",
+          "firehose",
+          "polymarket"
         ]
       }
     ]
