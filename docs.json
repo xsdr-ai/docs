@@ -37,7 +37,14 @@
         "group": "Getting Started",
         "pages": [
           "index",
-          "quickstart"
+          {
+            "group": "Quickstart",
+            "pages": [
+              "open-claw",
+              "hermes",
+              "untitled-page"
+            ]
+          }
         ]
       },
       {
