@@ -31,7 +31,24 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Concepts",
+        "pages": [
+          "webhooks",
+          "mcp",
+          "rules"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
