@@ -1,3 +1,12 @@
 ---
 title: "Firehose"
 ---
+Firehose, built by [Ahrefs](https://ahrefs.com/), is a persistent web crawler built for tracking mentions and changes at scale.
+
+## Latency
+The Firehose crawler needs to visit a web page in order to detect changes. It operates on it's own schedule. Generally, popular web pages are indexed faster than others.
+
+Because of this, changes will not necessarily be delivered to XSDR in "real-time". They will be delivered as soon as the crawler detects a change.
+
+## Rule Syntax
+When building rules, Firehose supports [lucene queries](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html). Refer to Firehose's [documentation](https://docs.firehose.com/stream/rules) for a full list of supported syntax.

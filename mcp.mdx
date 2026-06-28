@@ -1,3 +1,87 @@
 ---
-title: "MCP"
+title: "MCP Server"
+description: "Use XSDR's API through the Model Context Protocol"
 ---
+A remote Model Context Protocol (MCP) server implementation that integrates XSDR for understanding platform syntax, building rules, and listing matches.
+
+**Endpoint:** ```https://api.xsdr.app/mcp```
+
+## Installation
+Our MCP server can be integrated with any client that supports remote MCP. Here are some examples:
+<CodeGroup>
+    ```powershell OpenClaw
+    openclaw mcp set xsdr '{"url":"https://api.xsdr.app/mcp","transport":"streamable-http","headers":{"Authorization":"Bearer YOUR_XSDR_API_KEY"}}'
+    ```
+    ```json Cursor
+    {
+      "mcpServers": {
+        "xsdr": {
+          "url": "https://api.xsdr.app/mcp",
+          "headers": {
+            "Authorization": "Bearer YOUR_XSDR_API_KEY"
+          }
+        }
+      }
+    }
+    ```
+    ```json Claude Desktop
+    {
+      "mcpServers": {
+        "xsdr": {
+          "type": "http",
+          "url": "https://api.xsdr.app/mcp",
+          "headers": {
+            "Authorization": "Bearer YOUR_XSDR_API_KEY"
+          }
+        }
+      }
+    }
+    ```
+    ```powershell Claude Code
+    claude mcp add --transport http xsdr https://api.xsdr.app/mcp -H "Authorization: Bearer YOUR_XSDR_API_KEY"
+    ```
+    ```json VS Code
+    {
+      "servers": {
+        "xsdr": {
+          "type": "http",
+          "url": "https://api.xsdr.app/mcp",
+          "headers": {
+            "Authorization": "Bearer YOUR_XSDR_API_KEY"
+          }
+        }
+      }
+    }
+    ```
+    ```json Windsurf
+    {
+      "mcpServers": {
+        "xsdr": {
+          "serverUrl": "https://api.xsdr.app/mcp",
+          "headers": {
+            "Authorization": "Bearer YOUR_XSDR_API_KEY"
+          }
+        }
+      }
+    }
+    ```
+    ```json Zed
+    {
+      "xsdr": {
+        "url": "https://api.xsdr.app/mcp",
+        "headers": {
+          "Authorization": "Bearer YOUR_XSDR_API_KEY"
+        }
+      }
+    }
+    ```
+</CodeGroup>
+<Tip>Restart or reload MCP in your client after changes. </Tip>
+
+## Available Tools
+
+- ```platform_syntax```
+- ```create_rule```
+- ```list_rules```
+- ```delete_rule```
+- ```list_matches```

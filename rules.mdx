@@ -1,3 +1,43 @@
 ---
 title: "Rules"
 ---
+There are billions of posts on X and the web every day. Rules are a way to define criteria and filter live data based on what matters most.
+
+## Build a rule
+Rules can be built directly via our [API](/api-reference) or ask your agent to do it for you via the [MCP server](/mcp). Example:
+
+```curl Create a rule
+curl -X POST https://api.xsdr.app/api.CreateRule \
+  -H "Authorization: Bearer YOUR_XSDR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Elon Musk mentions",
+    "intent": "Monitor mentions of Elon Musk across platforms",
+    "platforms": ["x", "firehose"],
+    "overrides": {
+      "x": "from:elonmusk -is:retweet lang:en",
+      "firehose": "Elon Musk"
+    }
+  }'
+```
+<ParamField body="name" type="string" required>
+    A name for your rule.
+</ParamField>
+<ParamField body="intent" type="string" required>
+    A description of the rules purpose. Helpful for agents who need context.
+</ParamField>
+<ParamField body="platforms" type="string[]" required>
+    The platform(s) the rule should be created for. Accepted values: `x` or `firehose`.
+</ParamField>
+<ParamField body="overrides" type="map" required>
+    The platform specific syntax. For X, refer to their [docs](https://docs.x.com/x-api/posts/filtered-stream/integrate/operators) for proper syntax. For Firehose, refer to their [docs](https://docs.firehose.com/stream/rules) for proper syntax. For agents, call the `platform_syntax` [MCP](/mcp) tool.
+</ParamField>
+
+## Rules Types
+#### Regular
+Regular rules have no limits and are available to all paid plans. Currently, [Firehose](/firehose) rules are considered to be regular.
+
+#### Premium
+Premium rules include limits. We are not able to offer these in an unlimited capacity due to restrictions set by the platforms. Currently, [X](/x) rules are considered to be premium.
+
+<Note>Please reach out to support@xsdr.app if you need higher limits.</Note>

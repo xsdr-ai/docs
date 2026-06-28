@@ -1,0 +1,24 @@
+---
+title: "Installation"
+description: "Learn how to configure XSDR with your app or agent."
+---
+<Steps>
+    <Step title="Create an API key">
+        Go to the [dashboard](https://xsdr.app/dashboard) and create an API key. Give this key to your agent or use it to make requests to the XSDR API.
+    </Step>
+    <Step title="Configure your webhook">
+        On the dashboard, click **Manage webhooks**. You'll be redirected to our Svix portal. 
+        #####
+        **Setup an endpoint**
+        ```
+        https://example.com/webhooks/xsdr
+        ```
+        <Info>All webhook events will be sent to this URL. It must be able to receive POST requests.</Info>
+    </Step>
+    <Step title="Create a rule">
+        [Rules](/rules) help us understand your criteria and deliver matches in near real time. You can create a rule via the [API](/api-reference) or with our [MCP server](/mcp).
+    </Step>
+    <Step title="That's it!">
+        That's it! You're now ready to use XSDR. Continue reading to take full advantage of the platform.
+    </Step>
+</Steps>

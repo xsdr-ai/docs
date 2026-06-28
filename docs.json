@@ -1,91 +1,80 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "XSDR",
   "colors": {
     "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#acffa1",
+    "dark": "#27272a"
   },
-  "favicon": "/favicon.svg",
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "favicon": "/logo/favicon.ico",
+  "fonts": {
+    "family": "Inter"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "background": {
+    "color": {
+      "dark": "#09090b"
+    }
+  },
+  "thumbnails": {
+    "appearance": "dark"
+  },
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
+        "tab": "Documentation",
+        "groups": [
           {
-            "group": "Quickstart",
-            "pages": [
-              "open-claw",
-              "hermes",
-              "untitled-page"
-            ],
-            "expanded": true
+            "group": "Get Started",
+            "pages": ["index", "installation"]
+          },
+          {
+            "group": "Concepts",
+            "pages": ["webhooks", "mcp", "rules"]
+          },
+          {
+            "group": "Platforms",
+            "pages": ["x", "firehose", "polymarket"]
           }
         ]
       },
       {
-        "group": "Concepts",
-        "pages": [
-          "webhooks",
-          "mcp",
-          "rules"
-        ]
-      },
-      {
-        "group": "Platforms",
-        "pages": [
-          "x",
-          "firehose",
-          "polymarket"
-        ]
+        "tab": "API Reference",
+        "openapi": "/openapi.json"
       }
     ]
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/Mintlify Logo.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@xsdr.app"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "href": "https://xsdr.app/dashboard"
     }
   },
   "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
+    "options": ["copy", "mcp"]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/TryXSDR",
+      "github": "https://github.com/xsdr-ai"
     }
   }
 }
