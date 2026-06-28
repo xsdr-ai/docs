@@ -285,36 +285,6 @@
           }
         }
       },
-      "post": {
-        "summary": "List Rules",
-        "operationId": "listRulesPost",
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "rules": {
-                      "items": {
-                        "$ref": "#/components/schemas/api.RuleItem"
-                      },
-                      "type": "array"
-                    }
-                  },
-                  "required": [
-                    "rules"
-                  ],
-                  "type": "object"
-                }
-              }
-            },
-            "description": "Success response"
-          },
-          "default": {
-            "$ref": "#/components/responses/APIError"
-          }
-        }
-      }
     },
     "/matches": {
       "post": {
