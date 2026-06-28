@@ -37,7 +37,7 @@
           },
           {
             "group": "Concepts",
-            "pages": ["webhooks", "mcp", "rules"]
+            "pages": ["webhooks", "mcp-server", "rules"]
           },
           {
             "group": "Platforms",
