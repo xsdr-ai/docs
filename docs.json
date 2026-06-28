@@ -60,6 +60,11 @@
       {
         "label": "Support",
         "href": "mailto:support@xsdr.app"
+      },
+      {
+        "type": "discord",
+        "label": "Discord",
+        "href": "https://discord.gg/PjrRU4g3GV"
       }
     ],
     "primary": {
